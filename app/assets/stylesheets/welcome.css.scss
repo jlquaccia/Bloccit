@@ -1,0 +1,15 @@
+.social-btn {
+  background-color: #337AB7;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 3px;
+  transition: all 0.2s;
+  text-align: center;
+  border: 1px solid #DDDDDD;
+
+  &:hover {
+    background-color: #FFF;
+    border: 1px solid #DDDDDD;
+    color: #337AB7;
+  }
+}
