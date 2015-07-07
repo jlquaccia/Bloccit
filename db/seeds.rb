@@ -25,33 +25,44 @@
 
 # Assignment 32 /////////////////////////////
 
-require 'faker'
+# require 'faker'
 
-# Create Post
-1.times do
+# # Create Post
+# 1.times do
+#   Post.create!(
+#     title: Faker::Hacker.abbreviation,
+#     body: Faker::Hacker.say_something_smart
+#   )
+# end
+
+# last_post = Post.last
+
+# # Create Comment
+# 1.times do
+#   Comment.create!(
+#     post: last_post,
+#     body: Faker::Team.creature
+#   )
+# end
+
+# puts "Seed finished"
+# puts "#{Post.count} posts created"
+# puts "#{Comment.count} comments created"
+
+if Post.find_by(title: "Testing the New Test").nil?
   Post.create!(
-    title: Faker::Hacker.abbreviation,
-    body: Faker::Hacker.say_something_smart
+    title: "Testing the New Test",
+    body: "This is the body of the new test."
   )
-end
 
-last_post = Post.last
+  p = Post.find_by(title: "Testing the New Test")
 
-# Create Comment
-1.times do
   Comment.create!(
-    post: last_post,
-    body: Faker::Team.creature
+    post: p,
+    body: "This commmmmment was broughttt toooo you by assignmentttt 32"
   )
+else
+  puts "This post was already added."
 end
-
-puts "Seed finished"
-puts "#{Post.count} posts created"
-puts "#{Comment.count} comments created"
-
-# Post.create!(
-#   title: "Test Post Testing",
-#   body: "Blah blah blah"
-# )
 
 # ///////////////////////////////////////////
