@@ -1,0 +1,31 @@
+<h1>Edit Question</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>Guidelines for questions</p>
+    <ul>
+      <li>They should make sense.</li>
+      <li>They should not be boring.</li>
+      <li>They should not be stupid.</li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @question do |q| %>
+      <div class="form-group">
+        <%= q.label :title %>
+        <%= q.text_field :title, class: 'form-control', placeholder: "Enter question title" %>
+      </div>
+      <div class="form-group">
+        <%= q.label :question %>
+        <%= q.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter your question" %>
+      </div>
+      <div class="form-group">
+        <h5>Was the question resolved?</h5>
+        <%= check_box(@question, :resolved) %>
+      </div>
+      <div class="form-group">
+        <%= q.submit "Re-Submit Question", class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>
