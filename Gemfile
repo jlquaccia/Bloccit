@@ -56,3 +56,6 @@ gem 'pry-rails', :group => :development
 
 # Devise
 gem 'devise'
+
+# Figaro
+gem 'figaro', '1.0'
