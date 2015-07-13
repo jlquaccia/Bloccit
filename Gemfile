@@ -40,7 +40,7 @@ end
 gem 'spring',        group: :development
 
 # Pry
-gem 'pry-rails', :group => :development
+# gem 'pry-rails', :group => :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
