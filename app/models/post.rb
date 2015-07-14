@@ -6,13 +6,19 @@ class Post < ActiveRecord::Base
 
   # Assignment 38 //////////////////////////
 
-  def ordered_by_title
-    scope { order('title') }
-  end
+  # def ordered_by_title
+  #   scope { order('title') }
+  # end
 
-  def ordered_by_reverse_created_at
-    scope { order('created_at DESC') }
-  end
+
+  scope :ordered_by_title, -> { order('title') }
+
+
+  # def ordered_by_reverse_created_at
+  #   scope { order('created_at DESC') }
+  # end
+
+  scope :ordered_by_reverse_created_at, -> { order('created_at DESC') }
 
   # /////////////////////////////////////////
 end
