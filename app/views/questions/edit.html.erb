@@ -19,10 +19,15 @@
         <%= q.label :question %>
         <%= q.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter your question" %>
       </div>
+
+      <!-- Assignment 35 //////////////////// -->
+
       <div class="form-group">
         <h5>Was the question resolved?</h5>
-        <%= check_box(@question, :resolved) %>
+        <%= q.check_box :resolved %>
       </div>
+
+      <!-- ///////////////////////////////// -->
       <div class="form-group">
         <%= q.submit "Re-Submit Question", class: 'btn btn-success' %>
       </div>
