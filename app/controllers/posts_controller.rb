@@ -1,8 +1,16 @@
 class PostsController < ApplicationController
+  # def index
+  #   @posts = Post.all
+  #   authorize @posts
+  # end
+
+# Assignment 39 //////////////////////////////
+
   def index
-    @posts = Post.all
-    authorize @posts
+    @posts = policy_scope(Post)
   end
+
+  # /////////////////////////////////////////
 
   def show
     @post = Post.find(params[:id])
