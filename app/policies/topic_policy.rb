@@ -12,8 +12,8 @@ class TopicPolicy < ApplicationPolicy
   end
 
   def show?
-  if record.public == true
-      true
+    if record.public == true
+        true
     else
       user.present? && user.admin?
     end
