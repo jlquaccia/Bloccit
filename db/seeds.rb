@@ -10,7 +10,6 @@ require 'faker'
   user.skip_confirmation!
   user.save!
 end
-
 users = User.all
 
 # Create Topics
@@ -31,11 +30,9 @@ topics = Topic.all
     body: Faker::Lorem.paragraph
   )
 end
-
 posts = Post.all
 
 # Create Comments
-
 100.times do
   Comment.create!(
     # user: users.sample,   # we have not yet associated Users with Comments

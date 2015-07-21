@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     resources :posts, except: [:index]
   end
 
+  resources :posts do
+    resources :summaries, except: [:index]
+  end
+
   get 'about' => 'welcome#about'
 
   root to: 'welcome#index'
