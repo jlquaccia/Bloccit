@@ -10,4 +10,12 @@ class TopicPolicy < ApplicationPolicy
   def update?
     create?
   end
+
+  def show?
+  if record.public == true
+      true
+    else
+      user.present? && user.admin?
+    end
+  end
 end
