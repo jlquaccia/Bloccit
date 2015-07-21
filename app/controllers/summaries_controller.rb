@@ -11,7 +11,7 @@ class SummariesController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @summary = current_user.summaries.build(params.require(:summary).permit(:title, :body)) # Unsure of this line
+    @summary = Summary.new(params.require(:summary).permit(:body)) # Unsure of this line
     @summary.post = @post
 
     if @summary.save
