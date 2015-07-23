@@ -47,9 +47,21 @@ class PostsController < ApplicationController
     end
   end
 
+  # Assignment 43 ///////////////
+
+  
+
+  # /////////////////////////////
+
   private
 
   def post_params
     params.require(:post).permit(:title, :body)
   end
+
+  # Assignment 43 ///////////////
+
+  
+
+  # /////////////////////////////
 end
