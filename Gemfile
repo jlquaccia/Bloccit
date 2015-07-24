@@ -74,3 +74,6 @@ gem 'mini_magick'
 
 # Fog
 gem 'fog'
+
+# Will Paginate
+gem 'will_paginate', '~> 3.0.5'
