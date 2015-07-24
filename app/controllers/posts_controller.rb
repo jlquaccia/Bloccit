@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @topic = Topic.find(params[:topic_id])
     # @post = Post.new(post_params) # THIS LINE RESULTS IN AN ERROR: SAYS "USER CAN'T BE BLANK"
-    @post = current_user.posts.build(params.require(:post).permit(:title, :body)) # THIS LINE FIXES THE BUG CAUSED BY LINE 16
+    @post = current_user.posts.build(params.require(:post).permit(:title, :body, :image)) # THIS LINE FIXES THE BUG CAUSED BY LINE 16
     @post.topic = @topic
     authorize @post
 
@@ -50,6 +50,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :image)
   end
 end
