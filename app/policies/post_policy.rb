@@ -1,11 +1,11 @@
 class PostPolicy < ApplicationPolicy
   def index?
-    true
+    user.present?
   end
 
 # Assignment 39 ///////////////////////
 
-  class Scope < Scope
+  class Scope
     attr_reader :user, :scope
 
     def initialize(user, scope)
@@ -14,8 +14,12 @@ class PostPolicy < ApplicationPolicy
     end
 
     def resolve
-      if user.admin? || user.moderator?
-        scope.all
+      if user
+        if user.admin? || user.moderator?
+          scope.all
+        else
+          scope.where(:published => true)
+        end
       else
         scope.where(:published => true)
       end
