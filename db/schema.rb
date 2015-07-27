@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150720191649) do
-=======
 ActiveRecord::Schema.define(version: 20150727050629) do
->>>>>>> assignment-39-authorization
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -33,10 +29,7 @@ ActiveRecord::Schema.define(version: 20150727050629) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "topic_id"
-<<<<<<< HEAD
-=======
     t.boolean  "published",  default: true
->>>>>>> assignment-39-authorization
   end
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
@@ -50,8 +43,6 @@ ActiveRecord::Schema.define(version: 20150727050629) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   create_table "summaries", force: true do |t|
     t.text     "body"
     t.integer  "post_id"
@@ -61,7 +52,6 @@ ActiveRecord::Schema.define(version: 20150727050629) do
 
   add_index "summaries", ["post_id"], name: "index_summaries_on_post_id"
 
->>>>>>> assignment-39-authorization
   create_table "topics", force: true do |t|
     t.string   "name"
     t.boolean  "public",      default: true

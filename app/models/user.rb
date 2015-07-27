@@ -12,12 +12,9 @@ class User < ActiveRecord::Base
 
   def moderator?
     role == 'moderator'
-<<<<<<< HEAD
-=======
   end
 
   def member?
     role == 'member'
->>>>>>> assignment-39-authorization
   end
 end
