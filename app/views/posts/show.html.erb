@@ -23,6 +23,6 @@
     <% @comments.each do |comment| %>
       <%= render comment %>
     <% end %>
-    <%= render partial: "comments/form", locals: { topic: @topic, post: @post } %> <!-- confusion.. -->
+    <%= render partial: "comments/form", locals: { topic: @topic, post: @post } %>
   </div>
 </div>
