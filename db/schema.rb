@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150727194439) do
+=======
+ActiveRecord::Schema.define(version: 20150724184024) do
+>>>>>>> assignment-44-uploading-images
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -31,7 +35,11 @@ ActiveRecord::Schema.define(version: 20150727194439) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "topic_id"
+<<<<<<< HEAD
     t.boolean  "published",  default: true
+=======
+    t.string   "image"
+>>>>>>> assignment-44-uploading-images
   end
 
   add_index "posts", ["topic_id"], name: "index_posts_on_topic_id"
