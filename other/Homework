@@ -1,0 +1,8 @@
+(1) Examine the post/show view
+(2) Name at least two controller actions that directly render this view
+    1 - create (from the comments controller)
+    2 - show (from the posts controller)
+(3) What instance variables does the posts/show view depend on being defined
+    1 - @post
+    2 - @topic
+    3 - @comments
