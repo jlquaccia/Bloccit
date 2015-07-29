@@ -26,6 +26,8 @@
     <% @comments.each do |comment| %>
       <%= render comment %>
     <% end %>
-    <%= render partial: "comments/form", locals: { topic: @topic, post: @post } %>
+    <% if policy(@comment).create? %>
+      <%= render partial: "comments/form", locals: { topic: @topic, post: @post } %>
+    <% end %>
   </div>
 </div>
