@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    @topic = Topic.find(params[:topic_id])
-    @post = @topic.posts.find(params[:post_id])
+    # @topic = Topic.find(params[:topic_id])
+    # @post = @topic.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
     authorize @comment
@@ -9,7 +10,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment was saved."
-      redirect_to [@topic, @post]
+      redirect_to [@post]
     else
       @comments = @post.comments
       flash[:error] = "There was an error saving the comment.  Please try again."
@@ -18,18 +19,19 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:topic_id])
-    @post = @topic.posts.find(params[:post_id])
+    # @topic = Topic.find(params[:topic_id])
+    # @post = @topic.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
 
     authorize @comment
 
     if @comment.destroy
       flash[:notice] = "Comment was removed."
-      redirect_to [@topic, @post]
+      redirect_to [@post]
     else
       flash[:error] = "Comment couldn't be deleted.  Try again."
-      redirect_to [@topic, @post]
+      redirect_to [@post]
     end
   end
 
