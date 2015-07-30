@@ -16,6 +16,10 @@ group :production do
    gem 'binding_of_caller'
    gem 'better_errors'
  end
+
+ group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+ end
 # bootstrap-sass
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
