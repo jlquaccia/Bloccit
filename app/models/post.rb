@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   end
 
   def points
-    sum(:votes)
+    votes.sum(:value)
   end
 
   belongs_to :user

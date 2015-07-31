@@ -16,7 +16,7 @@ describe Post do
 
     describe '#down_votes' do
       it "counts the number of votes with value = -1" do
-        expect ( @post.down_votes ).to eq(2)
+        expect( @post.down_votes ).to eq(2)
       end
     end
 
