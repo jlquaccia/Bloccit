@@ -20,6 +20,3 @@
 
 # CarrierWave image
 public/uploads
-
-# Amazon Web Services
-aws/rootkey.csv
