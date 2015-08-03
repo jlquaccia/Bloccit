@@ -8,10 +8,13 @@ class Comment < ActiveRecord::Base
   after_create :send_favorite_emails
 
   private
+  
+  # 'deliver' for rails < 4.2 and 'deliver_now' for rails >= 4.2
+  # i have 4.1.1
 
   def send_favorite_emails
     post.favorites.each do |favorite|
-      FavoriteMailer.new_comment(favorite.user, post, self).deliver_now
+      FavoriteMailer.new_comment(favorite.user, post, self).deliver
     end
   end
 end

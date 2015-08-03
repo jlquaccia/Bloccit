@@ -17,7 +17,10 @@ describe Comment do
       allow( FavoriteMailer )
         .to receive(:new_comment)
         .with(@user, @post, @comment)
-        .and_return( double(deliver_now: true) )
+        .and_return( double(deliver: true) )
+
+        # 'deliver' for rails < 4.2 and 'deliver_now' for rails >= 4.2
+        # i have 4.1.1
 
         expect( FavoriteMailer )
           .to receive(:new_comment)
