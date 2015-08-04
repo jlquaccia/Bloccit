@@ -20,6 +20,7 @@ group :production do
 
  group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
  end
 # bootstrap-sass
 gem 'bootstrap-sass'
