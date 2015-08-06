@@ -87,3 +87,6 @@ gem 'fog'
 
 # Will Paginate
 gem 'will_paginate', '~> 3.0.5'
+
+# New Relic
+gem 'newrelic_rpm'
