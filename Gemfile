@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 gem 'pry'
 gem 'quiet_assets'
-gem 'thin'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 group :production do
@@ -22,6 +21,11 @@ group :production do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
  end
+
+ group :development, :production do
+  gem 'puma'
+ end
+ 
 # bootstrap-sass
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
