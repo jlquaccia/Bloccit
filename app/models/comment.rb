@@ -7,6 +7,8 @@ class Comment < ActiveRecord::Base
 
   after_create :send_favorite_emails
 
+  default_scope { order('updated_at DESC') }
+
   private
   
   # 'deliver' for rails < 4.2 and 'deliver_now' for rails >= 4.2
