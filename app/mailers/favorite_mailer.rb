@@ -1,5 +1,5 @@
 class FavoriteMailer < ActionMailer::Base
-  default from: "jlquaccia@gmail.com}"
+  default from: "jlquaccia@gmail.com"
 
   def new_comment(user, post, comment)
     # New Headers
