@@ -1,4 +1,4 @@
-<%= form_for [post, post.comments.new] do |f| %>
+<%= form_for [@post, Comment.new], remote: true do |f| %> <!-- do i need to change [post, post.comments.new] at all? refer to checkpoint 58 'Ajaxifying the Form' -->
   <% if @comment.errors.any? %>
     <div class="alert alert-danger">
       <h4>There are <%= pluralize(@comment.errors.count, "error") %>.</h4>
@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <%= form_group_tag(post.comments.new.errors[:body]) do %>
+  <%= form_group_tag(Comment.new.errors[:body]) do %>
     <h3>Add a comment</h3>
     <div class="form-group">
       <%= f.label :body %>
