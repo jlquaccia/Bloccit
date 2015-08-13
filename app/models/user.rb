@@ -27,10 +27,14 @@ class User < ActiveRecord::Base
   end
 
   # def voted(post)
-  #   if votes.where(post_id: post.id, value: 1).first
-  #     value = 1
-  #   else
-  #     value = -1
+  #   votes.where(post_id: post.id, value: :value).first
+  # end
+
+  # def voted(post)
+  #   if votes.where(value: 1)
+  #     votes.where(post_id: post.id, value: 1).first
+  #   elsif votes.where(value: -1)
+  #     votes.where(post_id: post.id, value: -1).first
   #   end
   # end
 end
