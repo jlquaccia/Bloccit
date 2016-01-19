@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 .user-info {
   margin-top: 9px;
@@ -20,4 +21,9 @@
 
 .voted {
   opacity: 0.5;
+}
+
+#user_remember_me {
+  position: absolute;
+  left: 130px;
 }

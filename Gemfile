@@ -25,10 +25,6 @@ group :production do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
  end
-
- group :development, :production do
-  gem 'puma'
- end
  
 # bootstrap-sass
 gem 'bootstrap-sass'
@@ -98,3 +94,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 # New Relic
 gem 'newrelic_rpm'
+
+# Font Awesome
+gem 'font-awesome-rails', '~> 4.5'
